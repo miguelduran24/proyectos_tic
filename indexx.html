@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define el conjunto de caracteres, en este caso UTF-8 para soportar caracteres especiales. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el diseño adaptable para dispositivos móviles. -->
+    <title>Formulario de inscripcion</title> <!-- Título de la página que se muestra en la pestaña del navegador. -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo CSS externo con el diseño del formulario. -->
+</head>
+<body>
+    <div class="form-container"> <!-- Contenedor principal para centrar y estilizar el formulario. -->
+        <h1>Formulario de inscripcion</h1> <!-- Título del formulario. -->
+        <form action="#" method="POST"> <!-- Define el inicio del formulario; envía datos con POST a la misma página (acción "#"). -->
+
+            <!-- Etiqueta y campo de texto corto -->
+            <label for="nombre">Nombre:</label> <!-- Asocia el texto "Nombre" al campo con id="nombre". -->
+            <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre" required> 
+            <!-- 
+            Campo de texto corto:
+            - type="text": Especifica que es un campo de texto.
+            - id="nombre": Identificador único del campo.
+            - name="nombre": Nombre del campo para enviar datos al servidor.
+            - placeholder="Escribe tu nombre": Muestra un texto de ejemplo en el campo.
+            - required: Hace obligatorio rellenar este campo. 
+            -->
+
+            <!-- Etiqueta y campo de texto largo -->
+            <label for="mensaje">correo electronico:</label> <!-- Asocia el texto "Mensaje" al área de texto con id="mensaje". -->
+            <textarea id="mensaje" name="mensaje"  placeholder="Escribe tu correo aquí"></textarea> 
+            <!-- 
+            Área de texto:
+            - id="mensaje": Identificador único del área de texto.
+            - name="mensaje": Nombre del campo para enviar datos.
+            - rows="5": Define el número de filas visibles.
+            - placeholder="Escribe tu mensaje aquí": Texto de ejemplo. 
+            -->
+
+            <!-- Botones de opción -->
+           
+               <legend>selecciona un curso:</legend> <!-- Título del grupo de opciones. -->
+
+               <select id="selecciona_curso" name="curso"> 
+                <!--Lista desplegable:
+                - id="selecciona un curso": Identificador único del cuadro.
+                - name="selecciona un curso": Nombre del campo para enviar datos.-->
+                <option selected disabled value="curso">Seleccione Curso</option>
+
+                <option value="mexico">html</option>             <!-- Opción para seleccionar México. -->
+                <option value="espana">python</option>             <!-- Opción para seleccionar España. -->
+                <option value="argentina">java</option>       <!-- Opción para seleccionar Argentina. -->
+                <option value="colombia">kotlin</option>         <!-- Opción para seleccionar Colombia. -->
+            </select>
+
+               
+                <div>
+
+                <label>modalidad de curso:</label> <!-- Título del grupo de casillas de chequeo. -->
+
+                <label for="Online"><input type="radio" id="Online" name="modalidad de curso" value="Online">Online</label>
+                   <!-- Casilla para "deporte". -->
+                    
+                <label for="presencial"><input type="radio" id="presencial" name="modalidad de curso" value="presencial">presencial</label> 
+                    <!-- Casilla para "música". -->
+                    
+                </div>
+                <br>
+
+
+                    <div>
+
+                 <label>temas de interese:</label>
+
+                 <label for="frontend"><input type="checkbox" id="frontend" name="modalidad de curso" value="frontend">frontend</label>
+                   <!-- Casilla para "deporte". -->
+                    
+                <label for="backend"><input type="checkbox" id="backend" name="modalidad de curso" value="backend">backend</label> 
+
+                <label for="fullstack"><input type="checkbox" id="fullstack" name="modalidad de curso" value="fullstack">fullstack</label> 
+                    <!-- Casilla para "música". -->
+
+                     </div>
+                     <br>
+
+            </fieldset>
+
+            <!-- Cuadro de listas -->
+            <label for="pais">País:</label> <!-- Asocia el texto "País" al cuadro de lista con id="pais". -->
+
+            <select id="pais" name="pais"> 
+                <!--Lista desplegable:
+                - id="pais": Identificador único del cuadro.
+                - name="pais": Nombre del campo para enviar datos.-->
+                <option selected disabled value="Pais">Seleccione Pais</option>
+                <option value="mexico">México</option>             <!-- Opción para seleccionar México. -->
+                <option value="espana">España</option>             <!-- Opción para seleccionar España. -->
+                <option value="argentina">Argentina</option>       <!-- Opción para seleccionar Argentina. -->
+                <option value="colombia">Colombia</option>         <!-- Opción para seleccionar Colombia. -->
+            </select>
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button> <!-- Botón para enviar el formulario. -->
+        </form>
+    </div>
+</body>
+</html>
